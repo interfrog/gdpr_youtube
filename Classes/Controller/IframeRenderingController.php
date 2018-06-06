@@ -67,9 +67,6 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
      * @return string HTML output
      */
     public function wrapIframe($content = '', $conf) {
-
-        DEBUG::var_dump("Wraping Iframe");
-
         $frames = array();
         preg_match_all("/<iframe[^<>]*?>[^<>]*?<\/iframe>/", $content, $frames);
         $res = $content;
@@ -89,9 +86,6 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
      * @return string new output with wrapped frames
      */
     protected function processFrame($frame, $total, $frameId){
-
-        Debug::var_dump(get_defined_vars());
-
         $datenschutzLink = "/datenschutz.html";
 
         return str_replace(

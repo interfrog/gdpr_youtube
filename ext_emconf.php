@@ -4,8 +4,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'title' => 'GDPR Youtube Loader',
 	'description' => 'Hides Youtube Iframes to load after user click.',
 	'category' => 'plugin',
-	'author' => 'Elias Geiß',
-	'author_email' => '',
+	'author' => 'Alexander Büchner, Christian Händel',
+	'author_email' => 'info@interfrog.de',
 	'author_company' => 'Interfrog Produktion GmbH',
 	'shy' => '',
 	'priority' => '',
@@ -20,6 +20,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '0.0.1',
 	'constraints' => array(
 		'depends' => array(
+			'typo3' => '7.6.1-8.99.99',
 		),
 		'conflicts' => array(
 		),
