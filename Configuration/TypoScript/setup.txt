@@ -1,0 +1,6 @@
+page {
+    includeJSFooterlibs {
+			iframeAgreementLoader = EXT:gdpr_youtube/Resources/Public/Scripts/iframeAgreementLoader.js
+	}
+}
+tt_content.html.stdWrap.postUserFunc = Interfrog\GdprYoutube\Controller\IframeRenderingController->wrapIframe

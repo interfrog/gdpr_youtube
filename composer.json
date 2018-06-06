@@ -1,0 +1,27 @@
+{
+    "name": "interfrog/gdpr_youtube",
+    "type": "typo3-cms-extension",
+    "description": "Hides Youtube Iframes to load after user click.",
+    "keywords": [
+        "TYPO3",
+        "extension",
+        "gdpr_youtube"
+    ],
+    "homepage": "http://interfrog.de",
+    "authors": [{
+        "name": "Interfrog Produktion GmbH",
+        "role": "Developer",
+        "homepage": "http://interfrog.de"
+    }],
+    "license": [
+        "GPL-2.0+"
+    ],
+    "require": {
+        "typo3/cms-core": ">=7.6.0,<8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Interfrog\\GdprYoutube\\": "Classes"
+        }
+    }
+}
