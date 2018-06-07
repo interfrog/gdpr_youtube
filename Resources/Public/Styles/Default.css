@@ -1,0 +1,77 @@
+.yt-agreement {
+	width: 100%;
+	height: 100%;
+	max-width: 100%; 
+	background-color: rgb(237,237,237); 
+	cursor: pointer; 
+	position: relative; 
+	top: 0; 
+    left: 0;
+    padding-bottom: 55.5%;
+}
+
+.yt-agreement .yt-agreement-inner {
+    display: inline-table;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 550px;
+}
+
+.yt-agreement .yt-agreement-icon {
+    text-align: center;
+    font-size: 4em;
+}
+
+.yt-agreement .yt-agreement-icon .yt-agreement-icon-inner{
+    display: inline-block;
+    border-radius: 50%; 
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: rgb(75,75,75);
+    border-color: rgb(75,75,75);
+    fill: white;
+    background-position:50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1.8em;
+    height: 1.8em;
+    border: 20px solid rgb(75,75,75);
+    overflow:initial;
+}
+
+.yt-agreement .yt-agreement-text {
+    line-height: 150%;
+	margin-top: 3em;
+}
+
+.yt-agreement .yt-agreement-text a {
+    color: rgb(0, 110, 175); 
+    font-weight: normal; 
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 850px) {
+    .yt-agreement {
+        font-size: 0.7em;
+    }
+    .yt-agreement .yt-agreement-inner{
+        max-width: 380px;
+    }
+    .yt-agreement .yt-agreement-icon {
+        font-size: 3em;
+    }
+    .yt-agreement .yt-agreement-icon .yt-agreement-icon-inner {
+        border: 10px solid rgb(75,75,75);
+    }
+    .yt-agreement .yt-agreement-text {
+        margin-top: 1em;
+    }
+}
+
+.regularColSet .col .yt-agreement .yt-agreement-text {
+    margin-top: 1em;
+    line-height: 120%;
+}

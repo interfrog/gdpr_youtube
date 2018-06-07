@@ -1,6 +1,30 @@
 page {
     includeJSFooterlibs {
-			iframeAgreementLoader = EXT:gdpr_youtube/Resources/Public/Scripts/iframeAgreementLoader.js
+		iframeAgreementLoader = EXT:gdpr_youtube/Resources/Public/Scripts/iframeAgreementLoader.js
+	}
+	includeCSS {
+		youtubeDefault = EXT:gdpr_youtube/Resources/Public/Styles/Default.css
 	}
 }
-tt_content.html.stdWrap.postUserFunc = Interfrog\GdprYoutube\Controller\IframeRenderingController->wrapIframe
+tt_content.html.stdWrap.preUserFunc = Interfrog\GdprYoutube\Controller\IframeRenderingController->wrapIframe
+tt_content.html.stdWrap.preUserFunc.privacyPageUid = 1
+tt_content.html.stdWrap.preUserFunc.templatePath = EXT:gdpr_youtube/Resources/Private/Templates/Box.html
+
+plugin.tx_gdpryoutube {
+	view {
+		templateRootPaths {
+			0 = EXT:gdpr_youtube/Resources/Private/Templates
+		}
+		partialRootPaths {
+			0 = EXT:gdpr_youtube/Resources/Private/Partials
+		}
+		layoutRootPaths {
+			0 = EXT:gdpr_youtube/Resources/Private/Layouts
+		}
+		templateName = Box
+	}
+	settings {
+		enableReplacement = 1
+		privacyPageUid = 1
+	}
+}
