@@ -7,8 +7,6 @@ page {
 	}
 }
 tt_content.html.stdWrap.preUserFunc = Interfrog\GdprYoutube\Controller\IframeRenderingController->wrapIframe
-tt_content.html.stdWrap.preUserFunc.privacyPageUid = 1
-tt_content.html.stdWrap.preUserFunc.templatePath = EXT:gdpr_youtube/Resources/Private/Templates/Box.html
 
 plugin.tx_gdpryoutube {
 	view {
