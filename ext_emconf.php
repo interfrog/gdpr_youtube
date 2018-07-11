@@ -17,7 +17,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
-	'version' => '0.9.1',
+	'version' => '0.9.3',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '7.6.1-8.99.99',
@@ -26,5 +26,10 @@ $EM_CONF[$_EXTKEY] = array(
 		),
 		'suggests' => array(
 		),
+	),
+	'autoload' => array(
+		'psr-4' => array(
+				'Interfrog\\GdprYoutube\\' => 'Classes'
+		)	
 	),
 );
