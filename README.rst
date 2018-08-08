@@ -26,6 +26,9 @@ To disable refactoring the Iframes and render them as normal, set::
 
     plugin.tx_gdpryoutube.settings.enableReplacement = 0
 
+To set a background image for the placeholder, add this attribute to your iframe::
+
+    data-placeholder-bg="URL OF YOUR BACKGROUND IMAGE";
 
 Folder structure
 ====================================

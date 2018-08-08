@@ -8,6 +8,8 @@
 	top: 0; 
     left: 0;
     padding-bottom: 55.5%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .yt-agreement .yt-agreement-inner {

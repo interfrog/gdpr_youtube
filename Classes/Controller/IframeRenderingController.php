@@ -112,6 +112,11 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
      */
     protected function processFrame($view, $frame, $total, $privacyPageUid){
 
+        $placeholder_bg = array();
+        if(preg_match_all("/data-placeholder-bg=[\"\'].*?[\"\']/",$frame,$placeholder_bg)){
+            $view->assign('data-placeholder-bg', str_replace(array("data-placeholder-bg=", "\"", "\'"),"",$placeholder_bg[0][0]));
+        }
+
         $view->assignMultiple([
             'data-replace' => $frame,
             'privacyPageUid' => $privacyPageUid
