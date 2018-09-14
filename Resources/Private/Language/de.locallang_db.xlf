@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-07-02T14:48:30Z" product-name="gdpr_youtube">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.iframe">
+				<source>IFrame</source>
+				<target>IFrame</target>
+			</trans-unit>
+            <trans-unit id="tt_content.overlay">
+				<source>Overlay</source>
+				<target>Verlauf</target>
+			</trans-unit>
+            <trans-unit id="tt_content.overlay.none">
+				<source>None</source>
+				<target>Keiner</target>
+			</trans-unit>
+            <trans-unit id="tt_content.overlay.grey">
+				<source>Grey</source>
+				<target>Grau</target>
+			</trans-unit>
+            <trans-unit id="tt_content.overlay.white">
+				<source>White</source>
+				<target>Weiß</target>
+			</trans-unit>
+			<trans-unit id="gdpryoutube_youtube.wizard.title">
+				<source>GDPR Youtube IFrame</source>
+				<target>DSGVO Youtube IFrame</target>
+			</trans-unit>
+			<trans-unit id="gdpryoutube_youtube.wizard.description">
+				<source>Youtube IFrame with confirmation overlay</source>
+				<target>Youtube IFrame mit bestätigungs-overlay</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

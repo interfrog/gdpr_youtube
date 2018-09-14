@@ -118,8 +118,9 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
         }
 
         $view->assignMultiple([
-            'data-replace' => $frame,
-            'privacyPageUid' => $privacyPageUid
+            'data-replace'   => $frame,
+            'privacyPageUid' => $privacyPageUid,
+            'data-origin'    => 'htmlcontent'
         ]);
         $body = $view->render();
 

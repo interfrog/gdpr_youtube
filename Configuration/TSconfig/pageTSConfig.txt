@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        gdpryoutube_youtube {
+            iconIdentifier = EXT:gdpr_youtube/ext_icon.gif
+            title = LLL:EXT:gdpr_youtube/Resources/Private/Language/locallang_db.xlf:gdpryoutube_youtube.wizard.title
+            description = LLL:EXT:gdpr_youtube/Resources/Private/Language/locallang_db.xlf:gdpryoutube_youtube.wizard.description
+            tt_content_defValues {
+                CType = gdpryoutube_youtube
+            }
+        }
+    }
+    show := addToList(gdpryoutube_youtube)
+}

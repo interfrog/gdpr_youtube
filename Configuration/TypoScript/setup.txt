@@ -26,3 +26,16 @@ plugin.tx_gdpryoutube {
 		privacyPageUid = 1
 	}
 }
+
+tt_content {
+   gdpryoutube_youtube = FLUIDTEMPLATE
+   gdpryoutube_youtube {
+      templateName = Box.html
+	  templateRootPaths {
+		  100 = EXT:gdpr_youtube/Resources/Private/Templates/
+	  }
+      dataProcessing {
+         1 = Interfrog\GdprYoutube\DataProcessing\YoutubeProcessor
+      }
+   }
+}
