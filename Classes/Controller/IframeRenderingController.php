@@ -90,6 +90,11 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
         $view->setTemplate($templateName);
 
         $privacyPageUid = $typoScriptSettings['settings.']['privacyPageUid'];
+        $rawMessage = $typoScriptSettings['settings.']['rawMessage'];
+        $linkedMessage = $typoScriptSettings['settings.']['linkedMessage'];
+        $linkedBefore = $typoScriptSettings['settings.']['linkedBefore'];
+        $linkedAfter = $typoScriptSettings['settings.']['linkedAfter'];
+
         
         $frames = array();
         preg_match_all("/<iframe[^<>]*?>[^<>]*?<\/iframe>/", $content, $frames);
@@ -120,6 +125,10 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
         $view->assignMultiple([
             'data-replace'   => $frame,
             'privacyPageUid' => $privacyPageUid,
+            'rawMessage'     => $rawMessage,
+            'linkedMessage'  => $linkedMessage,
+            'linkedBefore'   => $linkedBefore,
+            'linkedAfter'    => $linkedAfter,
             'data-origin'    => 'htmlcontent'
         ]);
         $body = $view->render();

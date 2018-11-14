@@ -60,6 +60,10 @@ class YoutubeProcessor implements DataProcessorInterface {
         $processedData['backgroundImageUid'] = $fileObjects[0] ? $fileObjects[0]->getUid() : null;
 
         $processedData['privacyPageUid'] = $typoScriptSettings['settings.']['privacyPageUid'];
+        $processedData['rawMessage'] = $typoScriptSettings['settings.']['rawMessage'];
+        $processedData['linkedMessage'] = $typoScriptSettings['settings.']['linkedMessage'];
+        $processedData['linkedBefore'] = $typoScriptSettings['settings.']['linkedBefore'];
+        $processedData['linkedAfter'] = $typoScriptSettings['settings.']['linkedAfter'];
 
         return $processedData;
     }

@@ -20,9 +20,29 @@
                             </div>
                             <div class="yt-agreement-text">
                                 <p>
-                                    Das Video wird erst nach dem Klick von Youtube geladen und abgespielt. 
-                                    Dazu baut ihr Browser eine direkte Verbindung zu den Youtube-Servern auf. 
-                                    Mehr Informationen entnehmen Sie unserer <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">Datenschutzerklärung</f:link.page>.
+                                    <f:if condition="{rawMessage}">
+                                        <f:then>
+                                            {rawMessage -> f:format.raw()}
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{linkedMessage}">
+                                                <f:then>
+                                                    <f:if condition="{linkedBefore}">
+                                                        {linkedBefore -> f:format.raw()}
+                                                    </f:if>
+                                                    {linkedMessage -> f:format.raw()}
+                                                    <f:if condition="{linkedAfter}">
+                                                        {linkedAfter -> f:format.raw()}
+                                                    </f:if> 
+                                                </f:then>
+                                                <f:else>
+                                                        Das Video wird erst nach dem Klick von Youtube geladen und abgespielt. 
+                                                        Dazu baut ihr Browser eine direkte Verbindung zu den Youtube-Servern auf. 
+                                                        Mehr Informationen entnehmen Sie unserer <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">Datenschutzerklärung</f:link.page>.
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if> 
                                 </p>
                             </div>
                         </div>
@@ -37,9 +57,29 @@
                         </div>
                         <div class="yt-agreement-text">
                             <p>
-                                Das Video wird erst nach dem Klick von Youtube geladen und abgespielt. 
-                                Dazu baut ihr Browser eine direkte Verbindung zu den Youtube-Servern auf. 
-                                Mehr Informationen entnehmen Sie unserer <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">Datenschutzerklärung</f:link.page>.
+                                <f:if condition="{rawMessage}">
+                                    <f:then>
+                                        {rawMessage -> f:format.raw()}
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{linkedMessage}">
+                                            <f:then>
+                                                <f:if condition="{linkedBefore}">
+                                                    {linkedBefore -> f:format.raw()}
+                                                </f:if>
+                                                {linkedMessage -> f:format.raw()}
+                                                <f:if condition="{linkedAfter}">
+                                                    {linkedAfter -> f:format.raw()}
+                                                </f:if> 
+                                            </f:then>
+                                            <f:else>
+                                                    Das Video wird erst nach dem Klick von Youtube geladen und abgespielt. 
+                                                    Dazu baut ihr Browser eine direkte Verbindung zu den Youtube-Servern auf. 
+                                                    Mehr Informationen entnehmen Sie unserer <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">Datenschutzerklärung</f:link.page>.
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if> 
                             </p>
                         </div>
                     </div>
