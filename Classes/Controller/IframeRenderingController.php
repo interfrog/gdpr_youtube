@@ -89,19 +89,20 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
         $view->setPartialRootPaths($partialRootPaths);
         $view->setTemplate($templateName);
 
-        $privacyPageUid = $typoScriptSettings['settings.']['privacyPageUid'];
-        $rawMessage = $typoScriptSettings['settings.']['rawMessage'];
-        $linkedMessage = $typoScriptSettings['settings.']['linkedMessage'];
-        $linkedBefore = $typoScriptSettings['settings.']['linkedBefore'];
-        $linkedAfter = $typoScriptSettings['settings.']['linkedAfter'];
-
+        $settings = [
+            'privacyPageUid'=> $typoScriptSettings['settings.']['privacyPageUid'],
+            'rawMessage'    => $typoScriptSettings['settings.']['rawMessage'],
+            'linkedMessage' => $typoScriptSettings['settings.']['linkedMessage'],
+            'linkedBefore'  => $typoScriptSettings['settings.']['linkedBefore'],
+            'linkedAfter'   => $typoScriptSettings['settings.']['linkedAfter']
+        ];
         
         $frames = array();
         preg_match_all("/<iframe[^<>]*?>[^<>]*?<\/iframe>/", $content, $frames);
         $res = $content;
         foreach($frames[0] as $iter => $frame) {
             if(strpos($frame, "youtube") !== FALSE){
-                $res = $this->processFrame($view, $frame, $res, $privacyPageUid);
+                $res = $this->processFrame($view, $frame, $res, $settings);
             }
         }
         return $res;
@@ -115,7 +116,7 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
      * @param string $total The complete output in which to replace the frame with its wrapped counterpart
      * @return string new output with wrapped frames
      */
-    protected function processFrame($view, $frame, $total, $privacyPageUid){
+    protected function processFrame($view, $frame, $total, $settings){
 
         $placeholder_bg = array();
         if(preg_match_all("/data-placeholder-bg=[\"\'].*?[\"\']/",$frame,$placeholder_bg)){
@@ -124,11 +125,11 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
 
         $view->assignMultiple([
             'data-replace'   => $frame,
-            'privacyPageUid' => $privacyPageUid,
-            'rawMessage'     => $rawMessage,
-            'linkedMessage'  => $linkedMessage,
-            'linkedBefore'   => $linkedBefore,
-            'linkedAfter'    => $linkedAfter,
+            'privacyPageUid' => $settings['privacyPageUid'],
+            'rawMessage'     => $settings['rawMessage'],
+            'linkedMessage'  => $settings['linkedMessage'],
+            'linkedBefore'   => $settings['linkedBefore'],
+            'linkedAfter'    => $settings['linkedAfter'],
             'data-origin'    => 'htmlcontent'
         ]);
         $body = $view->render();

@@ -30,7 +30,7 @@
                                                     <f:if condition="{linkedBefore}">
                                                         {linkedBefore -> f:format.raw()}
                                                     </f:if>
-                                                    {linkedMessage -> f:format.raw()}
+                                                    <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">{linkedMessage -> f:format.raw()}</f:link.page>
                                                     <f:if condition="{linkedAfter}">
                                                         {linkedAfter -> f:format.raw()}
                                                     </f:if> 
@@ -67,7 +67,7 @@
                                                 <f:if condition="{linkedBefore}">
                                                     {linkedBefore -> f:format.raw()}
                                                 </f:if>
-                                                {linkedMessage -> f:format.raw()}
+                                                <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">{linkedMessage -> f:format.raw()}</f:link.page>
                                                 <f:if condition="{linkedAfter}">
                                                     {linkedAfter -> f:format.raw()}
                                                 </f:if> 
