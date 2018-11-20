@@ -70,9 +70,7 @@ class IframeRenderingController extends \TYPO3\CMS\Frontend\Plugin\AbstractPlugi
         $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
         $configurationManager = $objectManager->get('TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManagerInterface');
         $typoScriptSettings = $configurationManager->getConfiguration(
-            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
-              'gdpr_youtube',
-              'tx_gdpryoutube'
+            \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT
             )['plugin.']['tx_gdpryoutube.'];
 
         $enableReplacement = $typoScriptSettings['settings.']['enableReplacement'];

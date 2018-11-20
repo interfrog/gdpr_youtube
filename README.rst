@@ -15,8 +15,14 @@ To unload the Default CSS, unset this TypoScript object::
 
    page.includeCSS.youtubeDefault
 
-To use your own Fluid Templates override these TypoScript Objects::
+To use your own Fluid Templates override these TypoScript Objects (CObject only) ::
 
+    tt_content.gdpryoutube_youtube.templateRootPaths
+    tt_content.gdpryoutube_youtube.partialRootPaths
+    tt_content.gdpryoutube_youtube.layoutRootPaths
+    tt_content.gdpryoutube_youtube.templateName
+
+Or these if using the HTML variant::
     plugin.tx_gdpryoutube.view.templateRootPaths
     plugin.tx_gdpryoutube.view.partialRootPaths
     plugin.tx_gdpryoutube.view.layoutRootPaths
