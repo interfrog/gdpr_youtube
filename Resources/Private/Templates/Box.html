@@ -27,13 +27,7 @@
                                         <f:else>
                                             <f:if condition="{linkedMessage}">
                                                 <f:then>
-                                                    <f:if condition="{linkedBefore}">
-                                                        {linkedBefore -> f:format.raw()}
-                                                    </f:if>
-                                                    <f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">{linkedMessage -> f:format.raw()}</f:link.page>
-                                                    <f:if condition="{linkedAfter}">
-                                                        {linkedAfter -> f:format.raw()}
-                                                    </f:if> 
+                                                    <f:if condition="{linkedBefore}">{linkedBefore -> f:format.raw()}</f:if><f:link.page pageUid="{privacyPageUid}" class="yt-agreement-link">{linkedMessage -> f:format.raw()}</f:link.page><f:if condition="{linkedAfter}">{linkedAfter -> f:format.raw()}</f:if> 
                                                 </f:then>
                                                 <f:else>
                                                         Das Video wird erst nach dem Klick von Youtube geladen und abgespielt. 
