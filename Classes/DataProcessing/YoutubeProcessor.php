@@ -38,8 +38,8 @@ class YoutubeProcessor implements DataProcessorInterface {
         //Debug::var_dump([$cObj, $contentObjectConfiguration, $processorConfiguration, $processedData, $this, time()], null, 8, false, true, false, [], []);
         $processedData['header'] = $processedData['data']['header'];
         $processedData['subheader'] = $processedData['data']['subheader'];
-        $processedData['data-replace'] = $processedData['data']['iframe'];
-        $processedData['overlay-gradient'] = $processedData['data']['overlay'];
+        $processedData['data-replace'] = $processedData['data']['tx_gdpr_youtube_iframe'];
+        $processedData['overlay-gradient'] = $processedData['data']['tx_gdpr_youtube_overlay'];
         $processedData['data-origin'] = "ytcontent";
         $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
         $configurationManager = $objectManager->get('TYPO3\\CMS\\Extbase\\Configuration\\ConfigurationManagerInterface');

@@ -12,15 +12,15 @@
 
 $GLOBALS['TCA']['tt_content']['types']['gdpryoutube_youtube'] = array(
    'showitem' => '
-            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,header,subheader,iframe,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,header,subheader,tx_gdpr_youtube_iframe,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,image,
-        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,overlay,layout,
+        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,tx_gdpr_youtube_overlay,layout,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
 ');
 
 $temporaryColumns = array (
-    'iframe' => array (
+    'tx_gdpr_youtube_iframe' => array (
         'exclude' => 1,
         'label' => 'LLL:EXT:gdpr_youtube/Resources/Private/Language/locallang_db.xlf:tt_content.iframe',
         'config' => array (
@@ -29,7 +29,7 @@ $temporaryColumns = array (
             'max'  => '1000'
         )
     ),
-    'overlay' => array(
+    'tx_gdpr_youtube_overlay' => array(
         'exclude' => 1,
         'label' => 'LLL:EXT:gdpr_youtube/Resources/Private/Language/locallang_db.xlf:tt_content.overlay',
         'config' => array(
